@@ -1,3 +1,4 @@
+package com.jason.week1;
 
 public class MoveZeroes {
     /**
@@ -31,7 +32,7 @@ public class MoveZeroes {
 
     public static void main(String[] args) {
         MoveZeroes move = new MoveZeroes();
-        int testCase[] = { 0, 1, 0, 3, 12 };
+        int[] testCase = { 0, 1, 0, 3, 12 };
         System.out.print("操作前：");
         move.printArray(testCase);
         move.moveZeroes(testCase);

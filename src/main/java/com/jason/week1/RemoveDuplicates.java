@@ -1,3 +1,5 @@
+package com.jason.week1;
+
 public class RemoveDuplicates {
     /**
      * 26. 删除排序数组中的重复项
