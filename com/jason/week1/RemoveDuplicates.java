@@ -4,8 +4,8 @@ public class RemoveDuplicates {
      *
      * 思路：快慢指针 时间复杂度：O(N) 空间复杂度： O(1)
      * 
-     * @param nums
-     * @return
+     * @param nums 待操作数组
+     * @return 返回新数组的长度
      */
     public int removeDuplicates(int[] nums) {
         if (nums.length == 0) {
