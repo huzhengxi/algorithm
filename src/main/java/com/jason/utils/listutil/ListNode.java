@@ -1,4 +1,4 @@
-package com.jason.utils;
+package com.jason.utils.listutil;
 
 /**
  * 链表结点

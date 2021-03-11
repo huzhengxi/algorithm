@@ -1,7 +1,7 @@
 package com.jason.week1;
 
-import com.jason.utils.ListNode;
-import com.jason.utils.Utils;
+import com.jason.utils.listutil.ListNode;
+import com.jason.utils.listutil.ListUtil;
 
 /**
  * 21. 合并两个有序链表
@@ -31,7 +31,7 @@ public class MergeTwoLists {
     int[] l2 = {1, 3, 4};
     MergeTwoLists merge = new MergeTwoLists();
     ListNode mergeNode = merge
-        .mergeTwoLists(Utils.createLinkedList(l1), Utils.createLinkedList(l2));
-    Utils.printLinkedList(mergeNode);
+        .mergeTwoLists(ListUtil.createLinkedList(l1), ListUtil.createLinkedList(l2));
+    ListUtil.printLinkedList(mergeNode);
   }
 }

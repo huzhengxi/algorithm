@@ -5,37 +5,12 @@ package com.jason.utils;
  */
 public class Utils {
 
-  /**
-   * 根据传入的数组创建出一个链表
-   *
-   * @param arr
-   * @return
-   */
-  public static ListNode createLinkedList(int[] arr) {
-    if (arr.length == 0) {
-      return null;
+  public static void printArray(int[] arr) {
+    System.out.print("[");
+    int len = arr.length;
+    for (int i = 0; i < len - 1; i++) {
+      System.out.print("" + arr[i] + ", ");
     }
-    ListNode head = new ListNode(arr[0]);
-    ListNode current = head;
-    for (int i = 1; i < arr.length; i++) {
-      current.next = new ListNode(arr[i]);
-      current = current.next;
-    }
-    return head;
-  }
-
-
-  /**
-   * 打印一个链表
-   *
-   * @param head
-   */
-  public static void printLinkedList(ListNode head) {
-    ListNode current = head;
-    while (current != null) {
-      System.out.printf("%d -> ", current.val);
-      current = current.next;
-    }
-    System.out.println("NULl");
+    System.out.println("" + arr[len - 1] + "]");
   }
 }
