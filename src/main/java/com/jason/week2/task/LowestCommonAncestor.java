@@ -23,4 +23,15 @@ public class LowestCommonAncestor {
     }
     return root;
   }
+
+  public static void main(String[] args) {
+    BuildTree buildTree = new BuildTree();
+    TreeNode root = buildTree
+        .buildTree(new int[]{3, 5, 6, 2, 7, 4, 1, 0, 8}, new int[]{6, 5, 7, 2, 4, 3, 0, 1, 8});
+    TreeNode p = root.left;
+    TreeNode q = p.right.right;
+    LowestCommonAncestor obj = new LowestCommonAncestor();
+    TreeNode loweastNode = obj.lowestCommonAncestor(root, p, q);
+    System.out.println(loweastNode.val);
+  }
 }
