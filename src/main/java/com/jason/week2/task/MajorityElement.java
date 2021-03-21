@@ -82,6 +82,7 @@ public class MajorityElement {
   }
 
   private int divide(int[] nums, int low, int high) {
+
     if (low == high) {
       return nums[low];
     }
