@@ -110,7 +110,3 @@ public class MyCircularDeque {
     return size == k;
   }
 }
-
-class Test {
-
-}
