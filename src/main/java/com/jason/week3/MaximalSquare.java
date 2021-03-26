@@ -2,6 +2,11 @@ package com.jason.week3;
 
 /**
  * 221. 最大正方形 https://leetcode-cn.com/problems/maximal-square/
+ * <p>
+ * dp方程：dp[i][j] = Math.min(dp[i-1][j-1], dp[i][j-1], dp[i-1][j]) + 1 如果
+ * matrix[i][j]为1，则以此为右下角的正方形的最大边长为：上面正方形、左边正方形和左上方的正方形中，最小的那个再加上1
+ * <p>
+ * 时间复杂度和空间复杂度都为 O（mn） m、n为二维数组的行和列
  */
 public class MaximalSquare {
 
@@ -18,6 +23,7 @@ public class MaximalSquare {
           if (i == 0 || j == 0) {
             dp[i][j] = 1;
           } else {
+            //上面正方形、左边正方形和左上方的正方形中，最小的那个再加上1
             dp[i][j] = Math.min(Math.min(dp[i - 1][j - 1], dp[i][j - 1]), dp[i - 1][j]) + 1;
           }
           maxSize = Math.max(maxSize, dp[i][j]);
