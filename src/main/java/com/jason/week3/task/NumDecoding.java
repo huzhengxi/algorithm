@@ -1,4 +1,4 @@
-package com.jason.week3;
+package com.jason.week3.task;
 
 /**
  * 91. 解码方法 https://leetcode-cn.com/problems/decode-ways/

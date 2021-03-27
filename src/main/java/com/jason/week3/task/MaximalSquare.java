@@ -1,4 +1,4 @@
-package com.jason.week3;
+package com.jason.week3.task;
 
 /**
  * 221. 最大正方形 https://leetcode-cn.com/problems/maximal-square/
@@ -32,6 +32,7 @@ public class MaximalSquare {
     }
     return maxSize * maxSize;
   }
+
 
   public static void main(String[] args) {
     char[][] matrix = {{'1', '0', '1', '0', '0'},
