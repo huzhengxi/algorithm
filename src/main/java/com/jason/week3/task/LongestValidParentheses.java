@@ -53,7 +53,7 @@ public class LongestValidParentheses {
     }
     int maxLength = 0;
     Deque<Integer> stack = new LinkedList<>();
-    //
+    //主要为了防止将第一位为")"的情况考虑进去
     stack.push(-1);
     for (int i = 0; i < len; i++) {
       if (s.charAt(i) == '(') {
