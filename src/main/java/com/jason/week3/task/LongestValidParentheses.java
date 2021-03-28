@@ -52,7 +52,8 @@ public class LongestValidParentheses {
       return 0;
     }
     int maxLength = 0;
-    Deque<Integer> stack = new LinkedList<Integer>();
+    Deque<Integer> stack = new LinkedList<>();
+    //
     stack.push(-1);
     for (int i = 0; i < len; i++) {
       if (s.charAt(i) == '(') {
