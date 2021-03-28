@@ -1,5 +1,8 @@
 package com.jason.week3.task;
 
+import java.util.Deque;
+import java.util.LinkedList;
+
 /**
  * 32. 最长有效括号
  * <p>
@@ -37,10 +40,39 @@ public class LongestValidParentheses {
     return maxLength;
   }
 
+  /**
+   * 方法栈
+   *
+   * @param s
+   * @return
+   */
+  public int longestValidParentheses2(String s) {
+    int len = s.length();
+    if (len == 0) {
+      return 0;
+    }
+    int maxLength = 0;
+    Deque<Integer> stack = new LinkedList<Integer>();
+    stack.push(-1);
+    for (int i = 0; i < len; i++) {
+      if (s.charAt(i) == '(') {
+        stack.push(i);
+      } else {
+        stack.pop();
+        if (stack.isEmpty()) {
+          stack.push(i);
+        } else {
+          maxLength = Math.max(maxLength, i - stack.peek());
+        }
+      }
+    }
+    return maxLength;
+  }
+
   public static void main(String[] args) {
     LongestValidParentheses validParentheses = new LongestValidParentheses();
-    System.out.println(validParentheses.longestValidParentheses("(()"));
-    System.out.println(validParentheses.longestValidParentheses(")()())"));
-    System.out.println(validParentheses.longestValidParentheses(""));
+    System.out.println(validParentheses.longestValidParentheses2("(()"));
+    System.out.println(validParentheses.longestValidParentheses2(")()())"));
+    System.out.println(validParentheses.longestValidParentheses2(""));
   }
 }
