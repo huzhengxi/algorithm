@@ -1,5 +1,7 @@
 package com.jason.week4.task;
 
+import com.jason.utils.TrieNode;
+
 public class Trie {
 
   private TrieNode root;

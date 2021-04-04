@@ -1,4 +1,4 @@
-package com.jason.week4.task;
+package com.jason.utils;
 
 /**
  * 并查集类
