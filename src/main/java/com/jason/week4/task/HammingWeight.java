@@ -1,4 +1,4 @@
-package com.jason.week4.checkin.task;
+package com.jason.week4.task;
 
 /**
  * 191. 位1的个数

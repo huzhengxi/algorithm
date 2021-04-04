@@ -1,4 +1,4 @@
-package com.jason.week4.checkin.task;
+package com.jason.week4.task;
 
 import java.util.HashMap;
 import java.util.Map;
