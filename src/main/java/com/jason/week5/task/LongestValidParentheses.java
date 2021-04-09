@@ -1,5 +1,8 @@
 package com.jason.week5.task;
 
+import java.util.Deque;
+import java.util.LinkedList;
+
 /**
  * 32. 最长有效括号
  * <p>
@@ -8,7 +11,7 @@ package com.jason.week5.task;
 public class LongestValidParentheses {
 
   /**
-   * 动态规划
+   * 动态规划  时间空间复杂度都为 O(N), N为字符串长度
    *
    * @param s
    * @return
@@ -32,6 +35,33 @@ public class LongestValidParentheses {
     return maxLen;
   }
 
+  /**
+   * 栈  时间复杂度和空间复杂度都为 O(N） N为字符串长度
+   *
+   * @param s
+   * @return
+   */
+  public int longestValidParenthesesStack(String s) {
+    if (s.length() == 0) {
+      return 0;
+    }
+    int maxLen = 0;
+    Deque<Integer> stack = new LinkedList<>();
+    stack.push(-1);
+    for (int i = 0; i < s.length(); i++) {
+      if (s.charAt(i) == '(') {
+        stack.push(i);
+      } else {
+        stack.pop();
+        if (stack.isEmpty()) {
+          stack.push(i);
+        } else {
+          maxLen = Math.max(maxLen, i - stack.peek());
+        }
+      }
+    }
+    return maxLen;
+  }
 
   public static void main(String[] args) {
     LongestValidParentheses longestValidParentheses = new LongestValidParentheses();
