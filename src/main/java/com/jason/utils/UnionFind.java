@@ -1,8 +1,5 @@
 package com.jason.utils;
 
-/**
- * 并查集类
- */
 public class UnionFind {
 
   int count;
@@ -36,7 +33,7 @@ public class UnionFind {
   public void union(int x, int y) {
     int rootx = find(x);
     int rooty = find(y);
-    if (rootx != rooty) {
+    if (rooty != rooty) {
       if (rank[rootx] > rank[rooty]) {
         parent[rooty] = rootx;
       } else if (rank[rootx] < rank[rooty]) {
@@ -52,6 +49,5 @@ public class UnionFind {
   public int getCount() {
     return count;
   }
+
 }
-
-
