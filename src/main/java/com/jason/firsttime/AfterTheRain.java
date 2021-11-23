@@ -41,7 +41,7 @@ public class AfterTheRain {
    * @return
    */
   public int trapDynamic(int[] heights) {
-    if (heights == null | heights.length == 0) {
+    if (heights == null || heights.length == 0) {
       return 0;
     }
     int ans = 0;

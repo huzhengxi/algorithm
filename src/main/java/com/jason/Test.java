@@ -1,18 +1,20 @@
 package com.jason;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class Test {
 
   public static void main(String[] args) {
-    LinkedList<Integer> demoList = new LinkedList<>();
-    demoList.add(1);
-    demoList.add(2);
-    demoList.add(3);
-    System.out.println(demoList.peek());
-    System.out.println(demoList);
+    List<String> list = new ArrayList<>();
+
+    list.add("1");
+    list.add("2");
+    list.add("3");
+    String[] strArr = list.toArray(new String[0]);
+    for (String s : strArr) {
+      System.out.print(s);
+    }
   }
 
 }
